@@ -1,0 +1,10 @@
+<div *ngFor="let patient of patients " class="row">
+    <div class="col">{{patient.firstName}}</div>
+    <div class="col">{{patient.lastName}}</div>
+    <div class="col">{{patient.address}}</div>
+    <div class="col">{{patient.personalId}}</div>
+    <div class="col">{{patient.sex}}</div>
+</div>
+<ngb-pagination class="d-flex justify-content-center" [pageSize]="pageSize" [collectionSize]="collectionSize" [(page)]="page" (pageChange)="pageChanged()"></ngb-pagination>
+
+<app-patient-form></app-patient-form>

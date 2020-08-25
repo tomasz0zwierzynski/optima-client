@@ -1,0 +1,15 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+        <li *ngIf="userObject" [ngbNavItem]="'home'">
+            <a routerLink="/">Tablica</a>
+        </li>
+        <li *ngIf="user" [ngbNavItem]="'patients'">
+            <a routerLink="/patients">Pacjenci</a>
+        </li>
+        <li *ngIf="admin" [ngbNavItem]="'configuration'">
+            <a routerLink="/configuration">Konfiguracja</a>
+        </li>
+    
+        <li *ngIf="userObject" [ngbNavItem]="'logout'">
+            <a (click)="logout()">Wyloguj</a>
+        </li>
+</ul>
